@@ -25,10 +25,18 @@
             ],
             "styles": [
               "src/styles.css",
-              {"input":"./node_modules/bootstrap/dist/css/bootstrap.min.css"}  
-              
+              {
+                "input": "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "inject": true
+              }
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -41,7 +49,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -60,7 +67,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -122,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "login-app"
+    }
+  },
+  "defaultProject": "login-app",
+  "cli": {
+    "analytics": "eedff10e-5810-4027-a9ce-46a8daf1d620"
+  }
 }
