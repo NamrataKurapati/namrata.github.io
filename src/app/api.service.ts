@@ -18,7 +18,7 @@ import { Users } from './users';
 
 export class ApiService {
   redirectUrl: string;
-  baseUrl: string = "http://localhost/login-app/php";
+  baseUrl: string = "https://virtualthinkingmedia.com/php";
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
   constructor(private httpClient: HttpClient) { }
   public userlogin(username, password) {
